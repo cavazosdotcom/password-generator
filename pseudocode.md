@@ -34,3 +34,24 @@ For each of the following, `Declare` a variable to store the value.
 - lower list ['a','b','c','d'...]
 - special list ['!','@','#','$'...]
 
+- on generate password, `prompt("Please choose a number of characters between 8 and 128.)`
+    if (userNum < 8 or userNum > 128) 
+    then prompt(Must be between 8 and 128)
+     
+        if else (userNum = not a number)
+        then prompt(please enter valid number)
+
+        else 
+        confirmNum = confirm(any numbers?)
+        confirmLow = confirm(any lowercase?)
+        confirmUp = confirm(any uppercase?)
+        confirmSpecial = confirm(any special char.?)
+    
+    
+    
+
+
+
+
+
+
