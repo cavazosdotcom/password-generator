@@ -22,18 +22,12 @@ var special = ["!","@","#","$","%","^","&","*","(",")","-","_","~","`","=","+","
 // alert("this is a message");
 // prompt("write password?");
 // confirm("do you want to write a password?")
-var myString = "Chris";
-
-myString = 1;
-
-myString += 1;
-
 
 function generatePassword (){
 
   var password = "";
   var characters = []
-  var passwordLength = 10;
+  // var passwordLength = 10;
 
   var passwordLength = prompt("Please choose a number of characters between 8 and 128.");
 
@@ -69,7 +63,12 @@ function generatePassword (){
       }
 
       console.log(characters);
-  // console.log('generate a apassword.')
+
+      for (var i=0; i<passwordLength; i++)
+        password = Math.floor(Math.random() * passwordLength.length );
+        console.log(password);
+        return password;
+        // console.log('generate a apassword.')
 
   // loop to repeat, selecting a random character and then appending it to the string
   // loop until our string reaches chosen length
