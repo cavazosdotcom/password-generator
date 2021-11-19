@@ -16,7 +16,7 @@ function generatePassword (){
   var characters = [];
 
   // user is prompted for the length of the password generated, giving us the variable for the password length
-  var passwordLength = prompt("Please choose a number of characters between 8 and 128.");
+  var passwordLength = prompt("Please select how long you would like the password to be (Must be between 8 and 128 characters).");
 
       // if statement varifying validity of user input, anything not a number will rerun the generator
       // given a valid input the user is asked for conditions for the password 
@@ -33,10 +33,10 @@ function generatePassword (){
       return generatePassword();
         // continues main function with valid input
       } else {
-        var isNum = confirm("Would you like to include numbers?");
-        var isLow = confirm("Would you like to include lowercase letters?");
-        var isUp = confirm ("Would you like to use uppercase letters?");
-        var isSpecial = confirm("Would you like to include special characters?");
+        var isNum = confirm("Click OK if you would you like to include numbers?");
+        var isLow = confirm("Click OK if you would you like to include lowercase letters?");
+        var isUp = confirm ("Click OK if you would you like to use uppercase letters?");
+        var isSpecial = confirm("Click OK if you would you like to include special characters?");
       };
 
       console.log(passwordLength);
