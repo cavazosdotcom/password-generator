@@ -33,21 +33,40 @@ function generatePassword (){
 
   var password = "";
   var characters = []
+  var passwordLength = 10;
 
+  var passwordLength = prompt("Please choose a number of characters between 8 and 128.");
+
+      if (passwordLength === null) {
+        return;
+      } else if (passwordLength < 8 || passwordLength > 128) {
+      alert("The password must be between 8 and 128 characters.");
+      return generatePassword();
+      } else if (passwordLength == isNaN()) {
+      alert("Please input a valid number.");
+      return generatePassword();
+      } else {
+        var isNum = confirm("Would you like to include numbers?");
+        var isLow = confirm("Would you like to include lowercase letters?");
+        var isUp = confirm ("Would you like to use uppercase letters?");
+        var isSpecial = confirm("Would you like to include special characters?");
+      };
+
+      console.log(typeof(passwordLength));
+      console.log(passwordLength);
   // console.log('generate a apassword.')
 
   // loop to repeat, selecting a random character and then appending it to the string
   // loop until our string reaches chosen length
 
-  var passwordLength = 10;
 
-  var isNumbers = true; // confirm ("do you want numbers?"; true;")
-  if(isNumbers) {
-    // password +=
-    characters = characters.concat(numbers);
-    console.log(characters);
+  // var isNumbers = true; // confirm ("do you want numbers?"; true;")
+  // if(isNumbers) {
+  //   // password +=
+  //   characters = characters.concat(numbers);
+  //   console.log(characters);
 
-  } 
+  // } 
 
 
   var isLowerLetters = true;

@@ -35,21 +35,43 @@ For each of the following, `Declare` a variable to store the value.
 - special list ['!','@','#','$'...]
 
 - on generate password, `prompt("Please choose a number of characters between 8 and 128.)`
+
+
+    password = ""
+    charcters = []
+
+
     if (userNum < 8 or userNum > 128) 
-    then prompt(Must be between 8 and 128)
+    then var passwordLength = prompt(Must be between 8 and 128)
+    return generatePassword
      
         if else (userNum = not a number)
         then prompt(please enter valid number)
+        return generatePassword
 
         else 
-        confirmNum = confirm(any numbers?)
-        confirmLow = confirm(any lowercase?)
-        confirmUp = confirm(any uppercase?)
-        confirmSpecial = confirm(any special char.?)
+        var isNum = confirm(any numbers?)
+        var isLow = confirm(any lowercase?)
+        var isUp = confirm(any uppercase?)
+        var isSpecial = confirm(any special char.?)
     
-    
-    
+    if (isNum === true)
+        concat chosen and numbers
+    if (isLow === true) 
+        concat chosen and lowercase
+    if (isUp === true)
+        concat chosen and uppercase
+    if (isSpecial === true)
+        concat chosen and special
+    if (all false)
+        alert (must choose at least 1 selection)
+        return generatePassword ()
 
+    for ( var i=0; i<passwordLength; i++) 
+    password += characters.Math.floor(Math.random() * characters.length)
+    return password
+
+    
 
 
 
