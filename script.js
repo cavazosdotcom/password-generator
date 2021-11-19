@@ -1,40 +1,37 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// creates variable with an array with characters the user later dictates will be in password
 var numbers = [0,1,2,3,4,5,6,7,8,9];
 var lowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upperLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var special = ["!","@","#","$","%","^","&","*","(",")","-","_","~","`","=","+",";",":","/","?",".",",",">","<","[","]","{","}"];
 
 
-// Data = array, strings, numbers, booleans
-
-//  Modify Data = Reassigning a new value to an existing variable
-
-//  Create new data
-
-//  Gather data from the user
-
-//  Modify Existing data
-
-//  Validate data (comparison operators IF/ELSE 
-
-
+// main function to generate password
 function generatePassword (){
 
+  // creates password variable and empty array for all the chosen characters
   var password = "";
-  var characters = []
+  var characters = [];
 
+  // user is prompted for the length of the password generated, giving us the variable for the password length
   var passwordLength = prompt("Please choose a number of characters between 8 and 128.");
 
+      // if statement varifying validity of user input, anything not a number will rerun the generator
+      // given a valid input the user is asked for conditions for the password 
+      // null passwordLength makes sure user isn't forced to continue through generator, if wanting to cancel right away they can cancel the generator
       if (passwordLength === null) {
         return;
+        // creates range for length
       } else if (passwordLength < 8 || passwordLength > 128) {
       alert("The password must be between 8 and 128 characters.");
       return generatePassword();
+        // validates if input is a number
       } else if (isNaN(passwordLength)) {
       alert("Please input a valid number.");
       return generatePassword();
+        // continues main function with valid input
       } else {
         var isNum = confirm("Would you like to include numbers?");
         var isLow = confirm("Would you like to include lowercase letters?");
@@ -42,9 +39,9 @@ function generatePassword (){
         var isSpecial = confirm("Would you like to include special characters?");
       };
 
-      console.log(typeof(passwordLength));
       console.log(passwordLength);
 
+      // user chooses what to include, if chosen, "characters" array concats each specified condition
       if (isNum === true) {
         characters = characters.concat(numbers);
       }
@@ -60,7 +57,9 @@ function generatePassword (){
 
       console.log(characters);
 
-      for (var i=0; i<passwordLength; i++)
+      // for loop to randomly select characters from the chosen "characters" array the user created with their conditions
+      // and creates a random "password" array that we display to the user
+      for (var i=0; i<passwordLength; i++) 
         password += characters[Math.floor(Math.random() * characters.length )];
         console.log(password);
         return password;
