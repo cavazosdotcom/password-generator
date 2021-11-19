@@ -42,7 +42,7 @@ function generatePassword (){
       } else if (passwordLength < 8 || passwordLength > 128) {
       alert("The password must be between 8 and 128 characters.");
       return generatePassword();
-      } else if (passwordLength == isNaN()) {
+      } else if (isNaN(passwordLength)) {
       alert("Please input a valid number.");
       return generatePassword();
       } else {
@@ -54,6 +54,12 @@ function generatePassword (){
 
       console.log(typeof(passwordLength));
       console.log(passwordLength);
+
+      if (isNum === true) {
+        characters = characters.concat(numbers);
+      }
+
+      console.log(characters);
   // console.log('generate a apassword.')
 
   // loop to repeat, selecting a random character and then appending it to the string
@@ -69,28 +75,28 @@ function generatePassword (){
   // } 
 
 
-  var isLowerLetters = true;
-  var isUpperLetters = true;
-  var isSpecial = true;
+  // var isLowerLetters = true;
+  // var isUpperLetters = true;
+  // var isSpecial = true;
 
   
 
   // randomly select from available characters
-  password += "a";
+  // password += "a";
 
-  console.log(password);
+  // console.log(password);
 
-  password += "r";
+  // password += "r";
 
-  console.log(password);
+  // console.log(password);
 
-  password += "5";
+  // password += "5";
 
-  console.log(password);
+  // console.log(password);
 
-  password += "]";
+  // password += "]";
 
-  return password;
+  // return password;
 }
 
 // Write password to the #password input
