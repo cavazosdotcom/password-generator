@@ -6,6 +6,7 @@ var lowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 var upperLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var special = ["!","@","#","$","%","^","&","*","(",")","-","_","~","`","=","+",";",":","/","?",".",",",">","<","[","]","{","}"];
 
+
 // Data = array, strings, numbers, booleans
 
 //  Modify Data = Reassigning a new value to an existing variable
@@ -19,15 +20,10 @@ var special = ["!","@","#","$","%","^","&","*","(",")","-","_","~","`","=","+","
 //  Validate data (comparison operators IF/ELSE 
 
 
-// alert("this is a message");
-// prompt("write password?");
-// confirm("do you want to write a password?")
-
 function generatePassword (){
 
   var password = "";
   var characters = []
-  // var passwordLength = 10;
 
   var passwordLength = prompt("Please choose a number of characters between 8 and 128.");
 
@@ -65,46 +61,10 @@ function generatePassword (){
       console.log(characters);
 
       for (var i=0; i<passwordLength; i++)
-        password = Math.floor(Math.random() * passwordLength.length );
+        password += characters[Math.floor(Math.random() * characters.length )];
         console.log(password);
         return password;
-        // console.log('generate a apassword.')
-
-  // loop to repeat, selecting a random character and then appending it to the string
-  // loop until our string reaches chosen length
-
-
-  // var isNumbers = true; // confirm ("do you want numbers?"; true;")
-  // if(isNumbers) {
-  //   // password +=
-  //   characters = characters.concat(numbers);
-  //   console.log(characters);
-
-  // } 
-
-
-  // var isLowerLetters = true;
-  // var isUpperLetters = true;
-  // var isSpecial = true;
-
-  
-
-  // randomly select from available characters
-  // password += "a";
-
-  // console.log(password);
-
-  // password += "r";
-
-  // console.log(password);
-
-  // password += "5";
-
-  // console.log(password);
-
-  // password += "]";
-
-  // return password;
+    
 }
 
 // Write password to the #password input
