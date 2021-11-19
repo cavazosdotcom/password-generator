@@ -58,6 +58,15 @@ function generatePassword (){
       if (isNum === true) {
         characters = characters.concat(numbers);
       }
+      if (isUp === true) {
+        characters = characters.concat(lowerLetters);
+      }
+      if (isLow === true) {
+        characters = characters.concat(upperLetters);
+      }
+      if (isSpecial === true) {
+        characters = characters.concat(special);
+      }
 
       console.log(characters);
   // console.log('generate a apassword.')
