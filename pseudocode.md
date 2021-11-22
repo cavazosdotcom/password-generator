@@ -48,7 +48,7 @@ For each of the following, `Declare` a variable to store the value.
         if else (userNum = not a number)
         then prompt(please enter valid number)
         return generatePassword
-
+    
         else 
         var isNum = confirm(any numbers?)
         var isLow = confirm(any lowercase?)

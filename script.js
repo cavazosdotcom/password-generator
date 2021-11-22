@@ -42,6 +42,10 @@ function generatePassword (){
       console.log(passwordLength);
 
       // user chooses what to include, if chosen, "characters" array concats each specified condition
+      if (isNum === false && isUp === false && isUp === false && isSpecial === false ) {
+        alert ("You must choose at least one condition");
+        return generatePassword();
+      }
       if (isNum === true) {
         characters = characters.concat(numbers);
       }
@@ -59,7 +63,7 @@ function generatePassword (){
 
       // for loop to randomly select characters from the chosen "characters" array the user created with their conditions
       // and creates a random "password" array that we display to the user
-      for (var i=0; i<passwordLength; i++) 
+      for (var i=0; i<passwordLength; i++)
         password += characters[Math.floor(Math.random() * characters.length )];
         console.log(password);
         return password;
