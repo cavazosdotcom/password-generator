@@ -49,10 +49,10 @@ function generatePassword (){
       if (isNum === true) {
         characters = characters.concat(numbers);
       }
-      if (isUp === true) {
+      if (isLow === true) {
         characters = characters.concat(lowerLetters);
       }
-      if (isLow === true) {
+      if (isUp === true) {
         characters = characters.concat(upperLetters);
       }
       if (isSpecial === true) {
